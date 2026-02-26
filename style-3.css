@@ -1,4 +1,3 @@
-
 /* RESET DO NAVEGADOR */
 * {
     margin: 0;
@@ -8,7 +7,6 @@
 
 body {
     background-color: rgba(0, 17, 255, 0.884);
-    
     background-image: url("src/image/Ninjin.jpg"); 
     background-repeat: no-repeat;
     background-position: center;
@@ -23,7 +21,6 @@ body {
     min-height: 100vh;
 }
 
-
 .card {
     background-color: rgba(245, 245, 245, 0.863); 
     max-width: 600px; 
@@ -31,14 +28,13 @@ body {
     padding: 40px;
     border-radius: 15px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
-    margin: 40px auto; 
+    /* Margem removida! O Flexbox do body assume o controle total aqui */
 }
-
 
 h2 {
     text-align: center;
     font-size: 60px;
-    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     color: #333;
     margin-bottom: 10px;
 }
@@ -50,6 +46,7 @@ p {
     margin-bottom: 20px;
 }
 
+/* O estilo padrão do 'a' agora afeta apenas links de texto comum (se houver) */
 a {
     display: block;
     text-align: center;
@@ -66,21 +63,25 @@ img {
     margin: 10px auto 20px;
 }
 
-button {
+/* NOVO ESTILO PARA OS LINKS DE NAVEGAÇÃO */
+.btn {
     display: block;
-    margin: 20px auto 0;
+    margin: 20px auto 10px; /* Margem ajustada para separar os botões */
     cursor: pointer;
     padding: 10px 30px; 
     border-radius: 30px;
     background-color: rgba(156, 4, 144, 0.849);
-    color: white;
+    color: white; /* Garante que o texto do link fique branco e não azul */
     border: none;
     font-weight: bold;
-    transition: background-color 0.3s; 
+    text-transform: uppercase; /* Deixa o texto do botão em maiúsculo para dar destaque */
+    transition: background-color 0.3s, transform 0.2s; 
+    max-width: 250px;
 }
 
-button:hover {
+.btn:hover {
     background-color: rgb(7, 85, 150); 
+    transform: scale(1.05); /* Efeito de crescimento que adicionamos na outra página */
 }
 
 ol {
