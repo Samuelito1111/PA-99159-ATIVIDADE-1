@@ -9,7 +9,7 @@
 body {
     background-color: rgba(0, 17, 255, 0.884);
     
-    background-image: url("src/image/Ninjin.jpg"); 
+    background-image: url ("src/image/Ninjin.jpg"); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
