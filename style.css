@@ -21,33 +21,61 @@
 /* ESTILO DO FUNDO DA PÁGINA */
 body {
     display: flex;
-    justify-content: center; /* Centraliza o card horizontalmente */
-    align-items: center;     /* Centraliza o card verticalmente */
+    justify-content: center; 
+    align-items: center;     
     min-height: 100vh;
     background-color: #014e19;
     
-    /* Mantém apenas as imagens da esquerda e direita no fundo */
     background-image: url("src/image/Historietas.jpg"), url("src/image/NinjinMenu.jpg");
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
-        
+    background-size: 50% 100%, 50% 100%; 
 }
 
-/* ESTILO DO NOVO CARD NO CENTRO */
+/* ESTILO DO CARD */
 .card {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco levemente transparente */
+    background-color: rgba(255, 255, 255, 0.95); 
     padding: 40px;
-    border-radius: 20px; /* Bordas arredondadas */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque e flutuar sobre o fundo */
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
     text-align: center;
-    max-width: 400px; /* Largura máxima do cartão */
-    width: 90%; /* Responsividade para telas menores */
-    z-index: 10; /* Garante que o card fique por cima das imagens de fundo */
+    max-width: 400px; 
+    width: 90%; 
+    z-index: 10; 
 }
 
-/* ESTILO DA IMAGEM DENTRO DO CARD */
+/* APLICANDO AS FONTES IMPORTADAS NO TÍTULO */
+.card h2 {
+    font-family: var(--fonte-principal);
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Espaço legal entre as letras para fontes divertidas */
+}
+
 .card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Arredonda levemente os cantos da imagem também */
+    border-radius: 10px; 
+    margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o botão */
+}
+
+/* ESTILO DO NOVO BOTÃO DE LINK */
+.btn {
+    display: block; /* Faz o botão ocupar a linha e respeitar margens */
+    padding: 15px 30px;
+    background-color: #014e19; /* Usa o verde do fundo do site */
+    color: white;
+    text-decoration: none; /* Tira o sublinhado padrão do link */
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s; /* Animação suave */
+}
+
+/* EFEITO AO PASSAR O MOUSE NO BOTÃO */
+.btn:hover {
+    background-color: #028a2d; /* Verde mais claro */
+    transform: scale(1.05); /* O botão cresce levemente */
 }
