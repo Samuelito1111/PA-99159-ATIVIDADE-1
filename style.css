@@ -1,6 +1,27 @@
 /* RESET DO NAVEGADOR */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Stagera';
+  src: url('/src/fonts/stagera.otf') format('opentype');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root{
+    --fonte-principal: 'Bangers', cursive;
+    --fonte-secundaria: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #014e19;
 }
