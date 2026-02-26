@@ -1,4 +1,4 @@
-/* RESET DO NAVEGADOR */
+/* RESET DO NAVEGADOR E FONTES */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
@@ -7,21 +7,47 @@
   src: url('/src/fonts/stagera.otf') format('opentype');
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --fonte-principal: 'Bangers', cursive;
     --fonte-secundaria: 'Open Sans', sans-serif;
 }
 
-body{
+/* ESTILO DO FUNDO DA PÁGINA */
+body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centraliza o card horizontalmente */
+    align-items: center;     /* Centraliza o card verticalmente */
     min-height: 100vh;
     background-color: #014e19;
+    
+    /* Mantém apenas as imagens da esquerda e direita no fundo */
+    background-image: url("src/image/Historietas.jpg"), url("src/image/NinjinMenu.jpg");
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;
+        
+}
+
+/* ESTILO DO NOVO CARD NO CENTRO */
+.card {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco levemente transparente */
+    padding: 40px;
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque e flutuar sobre o fundo */
+    text-align: center;
+    max-width: 400px; /* Largura máxima do cartão */
+    width: 90%; /* Responsividade para telas menores */
+    z-index: 10; /* Garante que o card fique por cima das imagens de fundo */
+}
+
+/* ESTILO DA IMAGEM DENTRO DO CARD */
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Arredonda levemente os cantos da imagem também */
 }
