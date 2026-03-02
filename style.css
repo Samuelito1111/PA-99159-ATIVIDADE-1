@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
     background-color: #014e19;
     
-    background-image: url("src/image/Historietas.jpg"), url("src/image/NinjinMenu.jpg");
+    background-image: url("src/image/Historietas.jpg"), url("src/image/NinjinNovoMenu.jpg");
     background-position: left center, right center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, 50% 100%; 
